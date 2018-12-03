@@ -66,6 +66,7 @@ d3.csv("data.csv")
             .attr("width", x.bandwidth())
             .attr("height", function(d) { return height - y(d.frequency); })
 
+	})
     .catch((error) => {
     		throw error;
     });
