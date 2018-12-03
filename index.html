@@ -65,6 +65,20 @@ d3.csv("data.csv")
             .attr("y", function(d) { return y(d.frequency); })
             .attr("width", x.bandwidth())
             .attr("height", function(d) { return height - y(d.frequency); })
+	.on("mouseover", function(){
+          d3.select(this)
+            .style("background-color", "orange");
+
+          // Get current event info
+          console.log(d3.event);
+          
+          // Get x & y co-ordinates
+          console.log(d3.mouse(this));
+      })
+      .on("mouseout", function(){
+          d3.select(this)
+            .style("background-color", "steelblue")
+      })
 
 	})
     .catch((error) => {
