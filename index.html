@@ -65,8 +65,7 @@ d3.csv("data.csv")
             .attr("y", function(d) { return y(d.frequency); })
             .attr("width", x.bandwidth())
             .attr("height", function(d) { return height - y(d.frequency); 
-	.style('cursor', 'pointer')
-    .on('mouseover', d => {
+    	.on('mouseover', d => {
       div
         .transition()
         .duration(200)
