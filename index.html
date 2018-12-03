@@ -14,6 +14,34 @@
   display: none;
 }
 
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
 </style>
 <svg width="960" height="500"></svg>
 <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -30,6 +58,13 @@ var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 	
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
+  })	
+
 d3.csv("data.csv")
   	.then((data) => {
         return data.map((d) => {
@@ -65,7 +100,9 @@ d3.csv("data.csv")
             .attr("y", function(d) { return y(d.frequency); })
             .attr("width", x.bandwidth())
             .attr("height", function(d) { return height - y(d.frequency); })
-	.on("mouseover", function(){
+	    .on('mouseover', tip.show)
+      	    .on('mouseout', tip.hide)
+	/*.on("mouseover", function(){
           d3.select(this)
             .style("fill", "orange");
 
@@ -78,7 +115,7 @@ d3.csv("data.csv")
       .on("mouseout", function(){
           d3.select(this)
             .style("fill", "steelblue")
-      })
+      })*/
 
 	})
     .catch((error) => {
