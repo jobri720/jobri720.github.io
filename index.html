@@ -30,11 +30,6 @@ var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 	
-var tip = d3.tip()
-  .attr('class', 'd3-tip')
-  .rootElement(document.getElementById('graph'))
-  .html(function(d) { return d; })
-	
 d3.csv("data.csv")
   	.then((data) => {
         return data.map((d) => {
