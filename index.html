@@ -29,7 +29,14 @@ var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
 
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+	
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
+  })
+	
 d3.csv("data.csv")
   	.then((data) => {
         return data.map((d) => {
