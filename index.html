@@ -62,7 +62,7 @@ var g = svg.append("g")
 	
 var tip = d3.tip()
   .attr('class', 'd3-tip')
-  .offset([-10, 0])
+  .offset([-10, 1])
   .html(function(d) {
     return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
   })	
