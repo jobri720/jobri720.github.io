@@ -73,7 +73,7 @@ svg.call(tip);*/
 var tool_tip = d3.tip()
       .attr("class", "d3-tip")
       .offset([-8, 0])
-      .html(function(d) { return "Radius: " + d; });
+      .html(function(d) { return "Frequency: " + d; });
     svg.call(tool_tip);
 	
 d3.csv("data.csv")
