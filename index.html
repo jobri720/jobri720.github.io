@@ -46,6 +46,7 @@
 <svg width="960" height="500"></svg>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js">
+<script src="d3-tip.js"></script>
 //<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 <script>
 
@@ -60,14 +61,20 @@ var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 	
-var tip = d3.tip()
+/*var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 1])
   .html(function(d) {
     return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
   })	
 
-svg.call(tip);
+svg.call(tip);*/
+
+var tool_tip = d3.tip()
+      .attr("class", "d3-tip")
+      .offset([-8, 0])
+      .html(function(d) { return "Radius: " + d; });
+    svg.call(tool_tip);
 	
 d3.csv("data.csv")
   	.then((data) => {
