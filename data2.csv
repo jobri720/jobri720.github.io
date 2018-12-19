@@ -12,5 +12,5 @@ Quote Button,13,Acceptence,Activation,Adjustment Type,Renewal,Termination
 Price UOM,11,User Subscripion,API Calls,Concurrent Users,,
 Catalog,9,Catalog,Default Quantity,,,
 Usage,9,Usage,,,,
-Outputs,8,Marketplace,Checkout,Bill,
+Outputs,8,Marketplace,Checkout,Bill,,
 Other,8,Logo,Ramp,Asset Line Item,Overlay,
