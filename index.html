@@ -63,7 +63,7 @@ svg.call(tip);*/
 var tool_tip = d3.tip()
       .attr("class", "d3-tip")
       .offset([-8, 0])
-      .html(function(d) { return "Watson: " + d.Keyword_1 + <br> + d.Keyword_2 + <br> + d.Keyword_3 + d.Keyword_4 + d.Keyword_5; });
+      .html(function(d) { return "Watson: " + d.Keyword_1 + d.Keyword_2 + d.Keyword_3 + d.Keyword_4 + d.Keyword_5; });
     svg.call(tool_tip);
 	
 d3.csv("data2.csv")
