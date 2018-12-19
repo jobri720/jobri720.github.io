@@ -1,0 +1,16 @@
+letter,frequency,Keyword_1,Keyword_2,Keyword_3,Keyword_4,Keyword_5
+Price List Item,40,Brand Pricer,Deal Guidance,Overage,PPU,Tax & Billing
+Constraint Rule,37,Warning Message,Message,Error,,
+Approval Rule,27,Level0,Approval Rule,,,
+Product,23,GBT,Option,Product,SD URL,Standalone
+Cart,22,Cart,Negitive Value,Net Discount,Pricing Call back,Term
+Migration,21,Migration,,,,
+Configuration Page,19,Configuration Page,,,,
+Bundle,13,Bundle,Bundle Configuration,Bundle Option,,
+Description,13,Long Description,,,,
+Quote Button,13,Acceptence,Activation,Adjustment Type,Renewal,Termination
+Price UOM,11,User Subscripion,API Calls,Concurrent Users,,
+Catalog,9,Catalog,Default Quantity,,,
+Usage,9,Usage,,,,
+Outputs,8,Marketplace,Marketplace,Checkout,Bill,
+Other,8,,,,,
