@@ -1,1 +1,188 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gaia Offering LCM Update Form</title>
+<style type="text/css">
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #61C29F;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+    vertical-align: middle
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 120px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+/* section */
+article section{
+ padding:0;
+}
+/* basic page column layout */
+.halves,.thirds{
+ width:49%;
+ float:left;
+ margin-right:2%;
+}
+.thirds{
+ width:32.66666%;
+ margin-right:1%;
+}
+.last{
+ margin-right:0;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+   <h1>Gaia Life Cycle Management</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="https://apps.na.collabserv.com/wikis/home?lang=en-us#!/wiki/We1369bfcb881_4283_8ca2_f6cafdabe0fd/page/About%20(Vision%20%26%20User%20Experience)"><strong>What is Gaia?</strong></a></li>
+    <br>
+    <li><a href="https://apps.na.collabserv.com/wikis/home?lang=en-us#!/wiki/We1369bfcb881_4283_8ca2_f6cafdabe0fd/page/Gaia%20for%20Offering%20Managers"><strong>Gaia for Offering Managers</strong></a></li>
+    <br>
+    <li><a href="https://apps.na.collabserv.com/wikis/home?lang=en-us#!/wiki/We1369bfcb881_4283_8ca2_f6cafdabe0fd/page/Current%20Gaia%20Platform%20Capabilities"><strong>Gaia Platform Capabilities</strong></a></li>
+    <br>
+    <li><a href="https://apps.na.collabserv.com/wikis/home?lang=en-us#!/wiki/We1369bfcb881_4283_8ca2_f6cafdabe0fd/page/Future%20Plans%20for%20Gaia"><strong>Gaia Road Map</strong></a></li>
+  </ul>
+</nav>
+
+<article>
+  <h1>Gaia LCM Update Form</h1>
+  <h4>Please use this form to indicate any changes that have, or will be happening regarding your offerings. If you do not have any updates, please indicate the reason on the form as "No Changes or Updates". Thank you!</h4>
+  
+  <p>
+  //<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+<input type=hidden name="orgid" value="00D1N000001hI2A">
+<input type=hidden name="retURL" value="https://apps.na.collabserv.com/communities/service/html/communityoverview?communityUuid=c61d398e-1a79-495a-8e73-32a694372ff0">
+
+<br>
+<label for="name">Contact Name:</label>
+<br>
+<input  id="name" maxlength="80" name="name" size="20" type="text" required/>
+<br>
+<br>
+<label for="email">Email:</label>
+<br>
+<input  id="emailAddress" maxlength="80" name="email" size="20" type="email" placeholder="JohnSmith@ibm.com" required/>
+<br>
+<br>
+<strong>Life Cycle Update:</strong>
+<section>
+     <div class="halves">
+      <p>
+       
+	   Change to PID:<input  id="00N1N00000PEjR8" name="00N1N00000PEjR8" type="checkbox" value="1" /><br>
+      
+       Change to Part Number(s) on Existing PID:<input  id="00N1N00000PEjRD" name="00N1N00000PEjRD" type="checkbox" value="1" /><br>
+       
+       # of Part Numbers Effected:<input  id="00N1N00000PEmfF" name="00N1N00000PEmfF" size="20" type="text" required/>
+       <br>
+       <br>
+      </p>
+     </div>
+     <div class="last">
+      <p>
+
+       OM Contact Name Change:<input  id="00N1N00000PEjR3" name="00N1N00000PEjR3" type="checkbox" value="1" /><br>
+
+	   Other (Add reason to Description):<input  id="00N1N00000PEjRI" name="00N1N00000PEjRI" type="checkbox" value="1" /><br>
+	   
+       No Changes or Updates:<input  id="00N1N00000PEjRN" name="00N1N00000PEjRN" type="checkbox" value="1" /><br>
+
+	   Pricer Name Change:<input  id="00N1N00000PEjRS" name="00N1N00000PEjRS" type="checkbox" value="1" /><br>	   
+
+      </p>
+     </div>
+    </section>
+<br>
+<br>
+PID Number:<input  id="00N1N00000PEjQj" maxlength="10" name="00N1N00000PEjQj" size="20" type="text" required/>
+<br>
+<br>
+<label for="description">Description:</label>
+<br>
+<textarea name="description"></textarea>
+<br>
+<br>
+
+<label for="priority">Priority</label><select  id="priority" name="priority">
+<option value="">--None--</option>
+<option value="Jan">Jan</option>
+<option value="Feb">Feb</option>
+<option value="Mar">Mar</option>
+<option value="Apr">Apr</option>
+<option value="May">May</option>
+<option value="Jun">Jun</option>
+<option value="Jul">Jul</option>
+<option value="Aug">Aug</option>
+<option value="Sept">Sept</option>
+<option value="Oct">Oct</option>
+<option value="Nov">Nov</option>
+<option value="Dec">Dec</option>
+</select>
+<br>
+<br>
+<!--<hr>
+<h2>
+Functionality Update: Quanity Ramp Details
+</h2>
+
+<h4>Gaia now has quantity ramp available for all boarded products. This funcationality will be enabled for all offerings unless otherwise called out below.</h4>
+
+Ramp Exception:<input  id="00N1N00000P1uAM" name="00N1N00000P1uAM" type="checkbox" value="1" />
+<br>
+<br>
+
+List Part Numbers for Ramp Exception:
+<br>
+<textarea  id="00N1N00000P21Mw" name="00N1N00000P21Mw" rows="3" type="text" wrap="soft"></textarea><br>
+<br>
+<br>-->
+
+<input type="submit" name="submit" style="height:25px;width:100px;font-weight:bold">
+
+</form>
+
+</p>
+</article>
+
+<footer>IBM SaaS Acceleration</footer>
+
+</div>
+
+</body>
+</html>
