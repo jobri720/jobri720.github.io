@@ -1,9 +1,4 @@
-$.getScript("cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js", function() {
-   alert("Script loaded but not necessarily executed.");
-});
-$.getScript("cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js", function() {
-   alert("Script loaded but not necessarily executed.");
-});
+
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
