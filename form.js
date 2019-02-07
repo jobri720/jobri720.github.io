@@ -4,6 +4,9 @@ var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
+$('#OpenImgUpload').click(function(){ 
+	$('#imgupload').trigger('click'); 
+});
 
 $(".next").click(function(){
 	if(animating) return false;
@@ -41,6 +44,14 @@ $(".next").click(function(){
 		//this comes from the custom easing plugin
 		easing: 'easeInOutBack'
 	});
+	$(document).ready(function () {
+    var val = $.trim($("#fname1").val());
+    if (val != "") {
+        $('#fname2').val(val);
+    }
+
+});
+
 });
 
 $(".previous").click(function(){
