@@ -10,15 +10,109 @@ html {
 	
 	/*background = gradient + image pattern combo*/
 	background: 
-		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+		linear-gradient(rgb(222, 237, 247), rgb(27, 40, 52));
 }
 
 body {
 	font-family: montserrat, arial, verdana;
 }
+/* basic page column layout */
+.halves{
+ width:49%;
+ float:left;
+ margin-right:2%;
+}
+.lasthalf{
+ width: 49%;
+ float: right;	
+ margin-right:0;
+}
+.frontthirds{
+ width:30%;
+ float:left;
+ margin-right:1%;
+}
+.middlethirds{
+ width:30%;
+ margin-right:1%;
+ margin-left:1%;
+}
+.lastthirds{
+ width:30%;
+ float:left;
+}
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 0px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  /*!!!!!MAKE RELITIVE!!!!!*/
+  left: 250px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #175d8d;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 /*form styles*/
 #msform {
-	width: 400px;
+	width: 60%;
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
@@ -55,7 +149,7 @@ body {
 /*buttons*/
 #msform .action-button {
 	width: 100px;
-	background: #27AE60;
+	background: #175d8d;
 	font-weight: bold;
 	color: white;
 	border: 0 none;
@@ -65,8 +159,37 @@ body {
 	margin: 10px 5px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #175d8d;
 }
+/*download button*/
+#msform .download-button {
+	width: 100px;
+	background: #175d8d;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .download-button:hover, #msform .download-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #175d8d;	
+}
+/*Upload Button Hiding*/
+#msform .upload-button {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.upload-button-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block; 
+}
+
 /*headings*/
 .fs-title {
 	font-size: 15px;
@@ -80,6 +203,23 @@ body {
 	color: #666;
 	margin-bottom: 20px;
 }
+/*checkbox Title*/
+.fs-cktitle {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+	margin-left: 75px;
+}
+.fs-cksubtitle {
+	font-weight: normal;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #666;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	position: relative;
+}
 /*progressbar*/
 #progressbar {
 	margin-bottom: 30px;
@@ -91,8 +231,8 @@ body {
 	list-style-type: none;
 	color: white;
 	text-transform: uppercase;
-	font-size: 9px;
-	width: 33.33%;
+	font-size: 12px;
+	width: 25%;
 	float: left;
 	position: relative;
 }
@@ -126,6 +266,6 @@ body {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-	background: #27AE60;
+	background: #175d8d;
 	color: white;
 }
